@@ -4,6 +4,7 @@
     <test verbose="2" preserve-order="true" name="spring learn bean">
         <classes>
             <class name="com.sbr.service.myTest"/>
+            <class name="com.sbr.service.beansetFac"/>
         </classes>
     </test>
 

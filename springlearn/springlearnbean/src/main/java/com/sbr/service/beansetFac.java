@@ -1,7 +1,8 @@
-package com.sbr;
+package com.sbr.service;
 
 import com.sbr.pojo.Hello;
 import com.sbr.pojo.User;
+import com.sbr.pojo.UserS;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.testng.annotations.Test;
@@ -17,12 +18,12 @@ public class beansetFac {
         hello.setName("str");
         hello.show();
 
-        User user = (User) context.getBean("user");
+        UserS user = (UserS) context.getBean("userS");
 //        user.setName("233");
         user.show();
 
-        User user2 = (User) context.getBean("user2");
-        User user3 = (User) context.getBean("user");
+        UserS user2 = (UserS) context.getBean("user2");
+        UserS user3 = (UserS) context.getBean("userS");
         user.setName("12");
         user2.setName("23");
         user2.show();

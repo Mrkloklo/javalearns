@@ -13,10 +13,10 @@
 <!--    </bean>-->
 
 <!--    scope 作用域，不设置默认单例 singlote ，多个实体prototype ，Request，http会实例新的，Session一个http session 中实例一次-->
-    <bean id="user" class="com.sbr.pojo.User" scope="prototype" >
+    <bean id="userS" class="com.sbr.pojo.UserS" scope="prototype" >
 <!--        <constructor-arg index="0" value="sss"></constructor-arg>-->
         <constructor-arg name="name" value="shenanigan2"/>
     </bean>
 
-    <alias name="user" alias="user2"></alias>
+    <alias name="userS" alias="user2"></alias>
 </beans>

@@ -1,6 +1,6 @@
 package com.sbr.pojo;
 
-public class User {
+public class UserS {
 
     private String name;
 
@@ -11,11 +11,11 @@ public class User {
     public void setName(String name) {
         this.name = name;
     }
-    public User() {
+    public UserS() {
         System.out.println("user无参构造方法");
     }
 
-    public User(String name) {
+    public UserS(String name) {
         this.name = name;
     }
 
