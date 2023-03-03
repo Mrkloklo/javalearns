@@ -1,4 +1,4 @@
-package com.sbr.pojo;
+package com.sbr.chap1.pojo;
 
 public class UserS {
 

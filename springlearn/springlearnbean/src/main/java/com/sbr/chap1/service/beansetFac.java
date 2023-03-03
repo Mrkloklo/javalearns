@@ -1,8 +1,7 @@
-package com.sbr.service;
+package com.sbr.chap1.service;
 
-import com.sbr.pojo.Hello;
-import com.sbr.pojo.User;
-import com.sbr.pojo.UserS;
+import com.sbr.chap1.pojo.Hello;
+import com.sbr.chap1.pojo.UserS;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.testng.annotations.Test;

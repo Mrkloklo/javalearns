@@ -3,8 +3,8 @@
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="spring learn bean">
         <classes>
-            <class name="com.sbr.service.myTest"/>
-            <class name="com.sbr.service.beansetFac"/>
+            <class name="com.sbr.chap1.service.myTest"/>
+            <class name="com.sbr.chap1.service.beansetFac"/>
         </classes>
     </test>
 
