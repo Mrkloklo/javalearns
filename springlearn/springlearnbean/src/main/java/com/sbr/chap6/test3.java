@@ -13,10 +13,18 @@ public class test3 {
     public  void  test3() {
         ApplicationContext context = new ClassPathXmlApplicationContext("chap6/springchap6.xml");
         UserDao userDao = (UserDao) context.getBean("userDao");
+        User user = new User();
+        user.setUsername("gou1");
+        user.setPassword("wolf");
+        userDao.addUsers(user);
+        userDao.deleteUser("gou");
         List<User> mapper = userDao.selUsers();
 
-        for (User user:mapper) {
-            System.out.println(user.toString());
+        for (User item:mapper) {
+            System.out.println(item.toString());
         }
+
+
+
     }
 }

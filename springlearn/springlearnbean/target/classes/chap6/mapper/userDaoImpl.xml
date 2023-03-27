@@ -6,4 +6,15 @@
     <select id="selUsers" resultType="User">
         select * from user
     </select>
+    
+    <insert id="addUsers" parameterType="User">
+        insert into user (username, password) values (#{username},#{password})
+    </insert>
+
+    <delete id="deleteUser" parameterType="User">
+        delete from user where username=#{username} ;
+    </delete>
+
+
 </mapper>
+
