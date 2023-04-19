@@ -9,4 +9,6 @@ public interface UserDao {
     int addUsers(User user);
     //根据id删除用户
     int deleteUser(String username);
+
+    void test(User user);
 }

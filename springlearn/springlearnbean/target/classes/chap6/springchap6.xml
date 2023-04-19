@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns:tx="http://www.springframework.org/schema/tx" xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:aop="http://www.springframework.org/schema/aop"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd
        http://www.springframework.org/schema/tx
-       http://www.springframework.org/schema/tx/spring-tx.xsd http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop.xsd">
+       http://www.springframework.org/schema/tx/spring-tx.xsd
+       http://www.springframework.org/schema/aop
+       https://www.springframework.org/schema/aop/spring-aop.xsd">
 
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
@@ -30,14 +33,14 @@
     </bean>
 
     <!--配置事务通知-->
-<!--    propagation_requierd：如果当前没有事务，就新建一个事务，如果已存在一个事务中，加入到这个事务中，这是最常见的选择。-->
-<!--    propagation_supports：支持当前事务，如果没有当前事务，就以非事务方法执行。-->
-<!--    propagation_mandatory：使用当前事务，如果没有当前事务，就抛出异常。-->
-<!--    propagation_required_new：新建事务，如果当前存在事务，把当前事务挂起。-->
-<!--    propagation_not_supported：以非事务方式执行操作，如果当前存在事务，就把当前事务挂起。-->
-<!--    propagation_never：以非事务方式执行操作，如果当前事务存在则抛出异常。-->
-<!--    propagation_nested：如果当前存在事务，则在嵌套事务内执行。如果当前没有事务，则执行与propagation_required类似的操作-->
-<!--    Spring 默认的事务传播行为是 PROPAGATION_REQUIRED，它适合于绝大多数的情况。-->
+    <!--    propagation_requierd：如果当前没有事务，就新建一个事务，如果已存在一个事务中，加入到这个事务中，这是最常见的选择。-->
+    <!--    propagation_supports：支持当前事务，如果没有当前事务，就以非事务方法执行。-->
+    <!--    propagation_mandatory：使用当前事务，如果没有当前事务，就抛出异常。-->
+    <!--    propagation_required_new：新建事务，如果当前存在事务，把当前事务挂起。-->
+    <!--    propagation_not_supported：以非事务方式执行操作，如果当前存在事务，就把当前事务挂起。-->
+    <!--    propagation_never：以非事务方式执行操作，如果当前事务存在则抛出异常。-->
+    <!--    propagation_nested：如果当前存在事务，则在嵌套事务内执行。如果当前没有事务，则执行与propagation_required类似的操作-->
+    <!--    Spring 默认的事务传播行为是 PROPAGATION_REQUIRED，它适合于绝大多数的情况。-->
     <tx:advice id="txAdvice" transaction-manager="transactionManager">
         <tx:attributes>
             <!--配置哪些方法使用什么样的事务,配置事务的传播特性-->
@@ -52,7 +55,7 @@
 
     <!--配置aop织入事务-->
     <aop:config>
-        <aop:pointcut id="txPointcut" expression="execution(* com.sbr.chap6.dao.*.*(..))"/>
+        <aop:pointcut id="txPointcut" expression="execution(* com.sbr.chap6.dao.UserDaoImpl.*(..))"/>
         <aop:advisor advice-ref="txAdvice" pointcut-ref="txPointcut"/>
     </aop:config>
 

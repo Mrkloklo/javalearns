@@ -25,4 +25,9 @@ public class UserDaoImpl extends SqlSessionDaoSupport implements UserDao{
     public int addUsers(User user) {
         return  getMapper().addUsers(user);
     }
+
+    public void test(User user) {
+        addUsers(user);
+        deleteUser(user.getUsername());
+    }
 }
