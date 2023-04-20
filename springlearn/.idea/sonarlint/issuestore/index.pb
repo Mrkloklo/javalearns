@@ -77,17 +77,3 @@ s
 Cspringlearnbean/src/main/java/com/sbr/chap4/aop/demo1/AfterLog.java,f/6/f626f6d39055b0fb5f701ee28941021738d56568
 z
 Jspringlearnbean/src/main/java/com/sbr/chap4/aop/demo1/UserServiceImpl.java,8/4/8425021a3aa6f5b39c9fa4b5bc4e24a37465244e
-r
-Bspringlearnbean/src/main/java/com/sbr/chap4/aop/demo1/AopTest.java,a/d/ad7ac5de7b668f8ed24ff4330ccc22c7f53f9fcf
-n
->springlearnbean/src/main/java/com/sbr/chap4/aop/demo1/Log.java,d/e/de3ab940e81e90e2c46e07e10ab903db65be8ab3
-v
-Fspringlearnbean/src/main/java/com/sbr/chap4/aop/demo1/UserService.java,0/4/04654144619a729b7d727c3a94e55237752d04bc
-v
-Fspringlearnbean/src/main/java/com/sbr/chap4/aop/demo2/UserService.java,b/0/b0a30054a7ec6240126d5e1597239de9d7e62794
-v
-Fspringlearnbean/src/main/java/com/sbr/chap4/aop/demo2/DiyPointCut.java,6/4/64d74bfccc9b05b30808fc8f6d0a0681969db717
-o
-?springlearnbean/src/main/java/com/sbr/chap1/service/myTest.java,1/c/1c290a05fd1b1a354c1e63e090b2334d1a11ef18
-t
-Dspringlearnbean/src/main/java/com/sbr/chap2/service/DemoService.java,2/2/224906a74001b20dfc5d2c19bb6b3c49d998cafc
